@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:ignore="ContentDescription">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/exo_playback_control_view_linear_layout_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/exo_rew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_reverse_10" />
+
+        <ImageButton
+            android:id="@+id/exo_play"
+            style="@style/ExoMediaButton.Play"
+            android:background="@drawable/play_pause_background"
+            android:tint="#FFEA7052" />
+
+        <ImageButton
+            android:id="@+id/exo_pause"
+            style="@style/ExoMediaButton.Pause"
+            android:background="@drawable/play_pause_background"
+            android:tint="#FFEA7052" />
+
+        <ImageButton
+            android:id="@+id/exo_ffwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_forward_10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/exo_playback_control_view_linear_layout_margin"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@id/exo_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_700"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/exo_playback_control_view_text_view_padding"
+            android:paddingRight="@dimen/exo_playback_control_view_text_view_padding"
+            android:textColor="#FFBEBEBE"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.google.android.exoplayer2.ui.DefaultTimeBar
+            android:id="@id/exo_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/exo_playback_control_view_time_bar_layout_height"
+            android:layout_weight="1"
+            android:focusable="false"
+            app:bar_height="1dp"
+            app:buffered_color="#80FFFFFF"
+            app:played_color="#FFFFFFFF"
+            app:scrubber_color="#FFFFFFFF"
+            app:unplayed_color="#4DFFFFFF" />
+
+        <TextView
+            android:id="@id/exo_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_700"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/exo_playback_control_view_text_view_padding"
+            android:paddingRight="@dimen/exo_playback_control_view_text_view_padding"
+            android:textColor="#FFBEBEBE"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

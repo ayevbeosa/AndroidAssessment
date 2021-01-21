@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AndroidAssessment</string>
+    <string name="hello_simbi">Hello Simbi</string>
+    <string name="subject_icon">Subject Icon</string>
+    <string name="lesson_image">Thumbnail of a lesson</string>
+    <string name="back">Back</string>
+</resources>

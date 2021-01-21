@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="exo_playback_control_view_text_view_padding">5dp</dimen>
+    <dimen name="exo_playback_control_view_time_bar_layout_height">16dp</dimen>
+    <dimen name="exo_playback_control_view_linear_layout_padding">4dp</dimen>
+    <dimen name="exo_playback_control_view_linear_layout_margin">4dp</dimen>
+</resources>

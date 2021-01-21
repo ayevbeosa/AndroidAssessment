@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.android.androidassessment.ui.dashboard.DashboardFragment"
+        tools:layout="@layout/dashboard_fragment">
+        <action
+            android:id="@+id/action_dashboardFragment_to_subjectFragment"
+            app:destination="@id/subjectFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectFragment"
+        android:name="com.example.android.androidassessment.ui.subject.SubjectFragment"
+        tools:layout="@layout/subject_fragment">
+        <argument
+            android:name="subjectWithChapters"
+            app:argType="com.example.android.androidassessment.data.local.SubjectWithChapters" />
+        <action
+            android:id="@+id/action_subjectFragment_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_subjectFragment_to_dashboardFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/dashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.example.android.androidassessment.ui.videoplayer.VideoPlayerFragment"
+        tools:layout="@layout/video_player_fragment">
+        <argument
+            android:name="subjectNavigation"
+            app:argType="com.example.android.androidassessment.model.SubjectNavigation" />
+        <action
+            android:id="@+id/action_videoPlayerFragment_to_SubjectFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/subjectFragment" />
+    </fragment>
+</navigation>
