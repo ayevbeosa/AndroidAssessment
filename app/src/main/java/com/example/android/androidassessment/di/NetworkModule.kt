@@ -53,7 +53,6 @@ object NetworkModule {
             .client(client)
             .addConverterFactory(MoshiConverterFactory.create(moshi).asLenient())
             .addCallAdapterFactory(CoroutineCallAdapterFactory())
-            .baseUrl(BASE_URL)
             .build()
     }
 
