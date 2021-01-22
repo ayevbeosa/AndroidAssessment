@@ -6,32 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".ui.videoplayer.VideoPlayerFragment">
 
-    <com.google.android.exoplayer2.ui.PlayerView
-        android:id="@+id/video_view"
+    <com.google.android.exoplayer2.ui.AspectRatioFrameLayout
+        android:id="@+id/video_aspect_ratio_frame_layout"
         android:layout_width="0dp"
-        android:layout_height="250dp"
-        app:fastforward_increment="10000"
+        android:layout_height="330dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:rewind_increment="10000"
-        app:show_timeout="10000">
+        app:resize_mode="fit">
 
-        <ImageButton
-            android:id="@+id/backImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:padding="8dp"
-            android:tint="@color/white"
-            android:background="@android:color/transparent"
-            android:contentDescription="@string/back"
-            android:src="@drawable/ic_back_arrow"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:fastforward_increment="10000"
+            app:rewind_increment="10000"
+            app:show_timeout="10000">
 
-    </com.google.android.exoplayer2.ui.PlayerView>
+            <ImageButton
+                android:id="@+id/backImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/back"
+                android:padding="8dp"
+                android:src="@drawable/ic_back_arrow"
+                android:tint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+    </com.google.android.exoplayer2.ui.AspectRatioFrameLayout>
 
     <TextView
         android:id="@+id/lesson_name"
@@ -46,7 +54,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/video_view"
+        app:layout_constraintTop_toBottomOf="@id/video_aspect_ratio_frame_layout"
         tools:text="The number line representation" />
 
     <TextView

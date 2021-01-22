@@ -45,6 +45,9 @@ class VideoPlayerFragment : Fragment() {
         binding.lessonName.text = subjectNavigation.lessonName
         binding.chapterName.text = subjectNavigation.chapterName
 
+        // Set aspect ratio
+        binding.videoAspectRatioFrameLayout.setAspectRatio(16F / 9F)
+
         binding.backImageView.setOnClickListener {
             this.findNavController().navigate(
                 VideoPlayerFragmentDirections.actionVideoPlayerFragmentToSubjectFragment()

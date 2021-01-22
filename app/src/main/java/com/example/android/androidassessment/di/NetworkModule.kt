@@ -27,7 +27,7 @@ object NetworkModule {
     fun provideOkHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor { message ->
-                Timber.wtf(message)
+                Timber.d(message)
             }.apply {
                 level = if (BuildConfig.DEBUG)
                     HttpLoggingInterceptor.Level.BODY
