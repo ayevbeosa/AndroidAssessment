@@ -10,6 +10,10 @@ Major features of this app are:
 
 App Design is gotten from [here](https://www.figma.com/file/rfaVkZMsmdq69sioOSuvfN/Android-Interview-App?node-id=0%3A1) and the API from [here](https://jackiechanbruteforce.ulesson.com/3p/api/content/grade)
 
+<img alt="Main Screen" height="450px" vspace="5" align="left" src="https://github.com/ayevbeosa/AndroidAssessment/blob/master/media/screen_one.jpg" />
+<img alt="Second Screen" height="450px" vspace="5" align="left" src="https://github.com/ayevbeosa/AndroidAssessment/blob/master/media/screen_two.jpg" />
+<img alt="Video Player Screen" height="450px" src="https://github.com/ayevbeosa/AndroidAssessment/blob/master/media/screen_three.jpg" />
+
 # Development Setup 🖥
 
 The app was developed using 
